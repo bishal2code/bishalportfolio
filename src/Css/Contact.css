@@ -89,7 +89,7 @@ input[type=email] {
     padding: 3px 5%;
     height: 25px;
     color: rgba(255, 255, 255, 0.684);
-    padding: none;
+    padding: 10px 15px;
 }
 
 .s1 input[type=text]:focus,
