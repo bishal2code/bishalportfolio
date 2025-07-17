@@ -30,7 +30,7 @@ const Contact = () => {
                 Message: Message
             }
             console.log("Success")
-            const responce = await fetch("http://localhost:5000/sendMessage", {
+            const responce = await fetch("https://emailsender-production-a242.up.railway.app/sendMessage", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
