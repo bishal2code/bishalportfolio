@@ -6,6 +6,7 @@ const Contact = () => {
     const [Message, setMessage] = useState("");
     const [load, setLoad] = useState(false)
     const [alert, setAlert] = useState("")
+    document.title = "Bishal | Portfolio"
 
 
     useEffect(()=>{
