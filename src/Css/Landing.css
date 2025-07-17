@@ -1,0 +1,348 @@
+.LandingPage {
+    height: 100vh;
+    /* margin-top: 60px; */
+    /* width: 100%; */
+    padding: 30px 9% 0;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* background-color: #1e2330; */
+    animation: show 2.5s ease-in;
+    z-index: 1;
+}
+
+.myInfos {
+    width: 80%;
+    display: flex;
+    gap: 30px;
+
+}
+
+.myInfos .PersonalInformation .textInfo .devName {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.whoareyou {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+
+.whoareyou span {
+    display: inline-block;
+    color: transparent;
+    /* -webkit-text-stroke: .7px #7cf03d; */
+    animation: displayText 8s linear ease-in;
+    animation-delay: calc(-4s * var(--i));
+    position: relative;
+}
+
+.whoareyou span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    border-right: 2px solid #7cf03d00;
+    color: #7cf03d;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: showText 3s ease-in;
+    animation-delay: 0s;
+}
+
+@keyframes showText {
+    0% {
+        width: 0%;
+        border-right: 2px solid #7cf03d;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes displayText {
+
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.InfoDesc {
+    font-size: 18px;
+    width: fit-content;
+    font-weight: 400;
+    margin-top: 10px;
+    color: white;
+}
+
+.MyLinks {
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
+    align-items: center;
+}
+
+.MyLinks button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px #7cf03d;
+    font-weight: 600;
+    border-radius: 40px;
+    border: 2px solid #7cf03d;
+    background-color: #7cf03d;
+    color: #1f242d;
+    cursor: pointer;
+    transition: 0.03s;
+}
+
+.MyLinks button:hover {
+    background-color: transparent;
+    color: #7cf03d;
+    box-shadow: none;
+}
+
+.socialLink {
+    text-decoration: none;
+    color: #7cf03d;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid #7cf03d;
+    transition: 0.03s;
+}
+
+.socialLink:hover {
+    background-color: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0px 0px 10px #7cf03d;
+}
+
+.MyImage {
+    /* margin-left: 100px; */
+    /* overflow: hidden; */
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+}
+
+
+.Border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+    border: 4px solid transparent;
+    border-top: 4px solid #7cf03d;
+    border-bottom: 4px solid #7cf03d;
+    border-radius: 150px;
+    animation: rotate 4s linear infinite;
+    /* box-shadow: 0px 0px 20px rgba(124, 240, 61, 0.5); */
+    z-index: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* .MyImage img {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    object-fit: cover;
+    z-index: 0;
+    animation: move 2s infinite;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+} */
+.MyImage img {
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    display: block;
+    border-radius: 150px;
+    object-fit: cover;
+    z-index: 0;
+    animation: move 2s ease-in;
+    /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); */
+}
+
+@keyframes move {
+    0% {
+        transform: translate(150px);
+        border-radius: 0%;
+    }
+}
+
+.boxBox {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.boxes {
+    display: flex;
+    position: relative;
+
+}
+
+.box {
+    width: 20%;
+    height: 100vh;
+    /* Set initial visible height */
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    animation: dropDown 0.6s ease forwards;
+}
+
+/* Drop down animation */
+@keyframes dropDown {
+    0% {
+        margin-top: 0;
+        height: 100vh;
+        opacity: 1;
+    }
+
+    90% {
+        margin-top: 100vh;
+        opacity: 0;
+        height: 100vh;
+    }
+
+    100% {
+        margin: 0;
+        opacity: 0;
+        height: 0;
+    }
+}
+
+
+.box:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.box:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.box:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.box:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .LandingPage {
+        max-width: 96%;
+        overflow: hidden;
+        padding: 30px 2% 0;
+    }
+
+    .myInfos .PersonalInformation .textInfo .devName {
+        font-size: 50px;
+    }
+
+    .whoareyou {
+        font-size: 30px;
+    }
+
+    .InfoDesc {
+        font-size: 15px;
+        width: fit-content;
+        font-weight: 400;
+        margin-top: 10px;
+        color: white;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .LandingPage {
+        max-width: 90%;
+        overflow: hidden;
+        padding: 30px 5% 0;
+    }
+
+    .myInfos {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+
+    }
+}
+
+@media screen and (max-width:800px) {
+    .myInfos .PersonalInformation .textInfo .devName {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .whoareyou {
+        font-family: 500;
+        font-size: 25px;
+    }
+    .MyImage {
+    width: 200px;
+    height: 200px;
+
+}
+
+
+.Border {
+    left: 0px;
+    width: 200px;
+    height: 200px;
+}
+.MyImage img {
+    width: 200px;
+    height: 200px;
+}
+.MyLinks {
+    gap: 20px;
+}
+
+.MyLinks button {
+    padding: 5px 20px;
+    font-size: 13px;
+}
+
+
+
+
+}

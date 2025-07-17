@@ -1,0 +1,251 @@
+.Contact {
+    height: calc(100vh - 70px);
+    width: 90%;
+    padding: 0px 5%;
+    padding-top: 70px;
+    display: flex;
+}
+
+.leftContact {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px;
+    width: 80%;
+    height: fit-content;
+    border-radius: 16px;
+    position: relative;
+    transition: 1s;
+}
+
+.Primary:hover .rotating {
+    animation-play-state: paused;
+    /* pauses on hover */
+}
+
+.leftContact .ContactForm {
+    padding: 25px;
+    width: 100%;
+    height: fit-content;
+    border-radius: 16px;
+    position: relative;
+
+    /* Transparent glass look */
+    background: #353945;
+    /* very soft white */
+    backdrop-filter: blur(12px);
+    /* strong blur for glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    /* for Safari support */
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    /* soft deep shadow */
+
+    color: #fff;
+    /* white text, assuming dark background */
+}
+
+.ContactForm .ContactTitle {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.ContactForm .section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section .s1 {
+    width: 48%;
+}
+
+.s1 label {
+    display: block;
+    margin-left: 10px;
+    font-size: 18px;
+
+}
+
+.s1 input[type=text],
+input[type=email] {
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.085);
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 90%;
+    padding: 3px 5%;
+    height: 25px;
+    color: rgba(255, 255, 255, 0.684);
+    padding: none;
+}
+
+.s1 input[type=text]:focus,
+input[type=email]:focus {
+    outline: none;
+    border: 1px solid #7cf03d;
+}
+
+.contactL {
+    display: block;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.ContactForm textarea {
+    width: 90%;
+    padding: 10px 5%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.085);
+    border: 1px solid white;
+    border-radius: 20px;
+    resize: none;
+    outline: none;
+}
+
+.ContactForm textarea:focus {
+    border: 1px solid #7cf03d;
+}
+
+.ContactForm button {
+    /* background-color: #7cf03d; */
+    width: 50%;
+    text-align: center;
+    height: 35px;
+    margin: 0 24%;
+    margin-top: 20px;
+    border: 2px solid #7cf03d;
+    background-color: transparent;
+    color: #7cf03d;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.ContactForm button:hover {
+    background-color: #7cf03d;
+    color: white;
+    box-shadow: 0px 0px 10px #353945;
+}
+
+.rightContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.rightContact img {
+    width: 80%;
+}
+
+.rotating {
+    position: absolute;
+    height: 1000px;
+    width: 100px;
+    background-color: #7cf03d;
+    animation: ContactRotate 4s linear infinite;
+    /* linear = smooth and constant speed */
+    transform-origin: center center;
+    /* ensures smooth center rotation */
+}
+
+@keyframes ContactRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.parallelogram-alert {
+    position: absolute;
+    margin-left: 5%;
+    width: fit-content;
+    background: linear-gradient(135deg, #7cf03d, #4caf50);
+    color: white;
+    padding: 10px 32px;
+    transform: skew(-20deg);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.parallelogram-alert p {
+    transform: skew(20deg);
+    /* Counter-skew for readable text */
+    margin: 0;
+    font-size: 16px;
+}
+.parallelogram-alert-error p {
+    transform: skew(20deg); /* Counter-skew */
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.parallelogram-alert-error {
+    position: absolute;
+    margin-left: 5%;
+    width: fit-content;
+    background: linear-gradient(135deg, #ff4e4e, #d32f2f);
+    /* Red tones */
+    color: white;
+    padding: 10px 32px;
+    transform: skew(-20deg);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    margin: 40px auto;
+    text-align: center;
+
+}
+
+@media screen and (max-width:1200px) {
+    .leftContact {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+}
+
+@media screen and (max-width:793px){
+    .leftContact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .rightContact {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+}
