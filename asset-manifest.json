@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bishalportfolio/static/css/main.41bc7a4f.css",
+    "main.js": "/bishalportfolio/static/js/main.48435561.js",
+    "index.html": "/bishalportfolio/index.html",
+    "main.41bc7a4f.css.map": "/bishalportfolio/static/css/main.41bc7a4f.css.map",
+    "main.48435561.js.map": "/bishalportfolio/static/js/main.48435561.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41bc7a4f.css",
+    "static/js/main.48435561.js"
+  ]
+}
