@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.bishaldhakal.name.np",
+  "homepage": "https://www.bishaldhakal.name.np" ,
 
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
