@@ -2,7 +2,8 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bishal2code.github.io/bishal",
+  "homepage": "https://bishaldhakal.name.np/bishalportfolio",
+
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "@testing-library/dom": "^10.4.0",
